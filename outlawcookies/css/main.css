@@ -1,0 +1,119 @@
+/* --------- Reset all ------------*/
+
+/* --------- Fonts ----------------*/
+@font-face{
+    font-family: "Quentincaps";
+    src: url('QuentinCaps.ttf'),
+    url('QuentinCaps.ttf'); /* IE */
+}
+@font-face{
+    font-family: "Nickelodeon";
+    src: url('HardBlock.ttf'),
+    url('HardBlock.ttf'); /* IE */
+}
+@font-face{
+    font-family: "Go_2_Old_Western";
+    src: url('Go_2_Old_Western.ttf'),
+    url('Go_2_Old_Western.ttf'); /* IE */
+}
+
+/* --------- Main Site Background -----------*/
+
+.wrapbg {
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+}
+.imagebg {
+    position: absolute;
+    left: 50%;
+    margin-left: -512px;
+    background:url('../img/bg.jpg') no-repeat;
+	background-size:contain;
+    width:1024px;
+    height:768px;
+}
+/* -- Text in the main site -- */
+/* -- Title -- */
+#index_title{
+  color: #b5732d;
+  font-size: 6vh;  
+  font-family: Quentincaps;
+  line-height: 44px;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 28%;
+  left: 0;
+  margin-top: -50px; /* half the height of the element */
+}
+/* -- Order now Div -- */
+#index_div_order{
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  margin-top: -50px; /* half the height of the element */
+
+}
+#index_link_order{
+  color: #fff;
+  background-color:rgba(53,3,8,0.5);
+  border: 0px;
+  font-family: Quentincaps;
+  font-size: 5vh;
+  height: 20px;
+  line-height: 20px;
+  padding: 20px 20px;
+}
+
+/* --------- Order site ------------*/
+div.main {
+  position:  absolute;
+  bottom: 0;
+  top: 0;
+  background: #b5732d;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 75vh;
+  height: 100%;
+}
+#form_title {
+  position: fixed;
+  background: #fff;
+  border: 2px double;
+  color: #350308;
+  font-family: Quentincaps;
+  font-size: 6vh; 
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 75vh;
+  z-index:12;
+}
+#form_content {
+  position: absolute;
+  background: #b5732d;
+  color: #fff;
+  font-family: Nickelodeon;
+  top: 7vh;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  font-size: 4vh;
+  line-height: 4vh;
+}
+input.form_general {
+  height:4vh;
+  width: 95%;
+}

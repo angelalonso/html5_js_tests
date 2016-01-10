@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <title>OUTLAW COOKIES!</title>
+    <meta charset="utf-8"></meta>
+
+    <link rel="stylesheet" href="css/main.css" />
+</HEAD>
+<BODY>
+<!-- https://developers.google.com/web/fundamentals/input/form/label-and-name-inputs -->
+  <div class="main">
+	<div id="form_title">OUTLAW COOKIES</div>
+	
+	<div id="form_content">
+		<table border=0 width=100%>
+		<tr >
+		<td width=40%>
+			<div>
+				<label for="form_name">Name</label>
+			</div>
+		</td>
+		<td>
+			<div>
+				<input type="text" name="name" id="form_name" class="form_general"
+					placeholder="Full name" required autocomplete="name">
+			</div>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<div>
+				<label for="form_street">Address</label>
+			</div>
+		</td>
+		<td>
+			<div>
+				<input type="text" name="address" id="form_street" class="form_general"
+					placeholder="Street, Number..." required autocomplete="street-address">
+			</div>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<div>
+				<label for="form_zip">ZIP Code</label>
+			</div>
+		</td>
+		<td>
+			<div>
+				<input type="text" name="zip" id="form_zip" class="form_general"
+					placeholder="ZIP Code" required autocomplete="postal-code">
+			</div>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<div>
+				<label for="form_phone">Phone Number</label>
+			</div>
+		</td>
+		<td>
+			<div>
+				<input type="tel" name="phone" id="form_phone" class="form_general"
+					placeholder="Phone Number" required autocomplete="tel">
+			</div>
+		</td>
+		</tr>
+		</table>		
+<br><br><br>
+
+		<div>
+		<table border=0 width=100%>
+		<tr >
+		<td width=60%>
+			<label for="form_amount_bandit">Bandit Cookie, </label>
+		</td>
+		<td width=10%>
+			<input type="number" name="amount" id="form_amount_bandit" class="form_general" min="0" max="10" value="0" step="1" onchange="showValue(this.value)"
+				placeholder="Amount of boxes" required autocomplete="number">
+		</td>
+		<td>
+			Portions
+		</tr>
+		<tr>
+		<td>
+			<label for="form_amount_smuggler">Smuggler Cookie, </label>
+		</td>
+		<td>
+			<input type="number" name="amount" id="form_amount_smuggler" class="form_general" min="0" max="10" value="0" step="1" onchange="showValue(this.value)"
+				placeholder="Amount of boxes" required autocomplete="number">
+		</td>
+		<td>
+			Portions
+		</tr>
+		<tr>
+		<td>
+			<label for="form_amount_anarchist">Anarchist Cookie, </label>
+		</td>
+		<td>
+			<input type="number" name="amount" id="form_amount_anarchist" class="form_general" min="0" max="10" value="0" step="1" onchange="showValue(this.value)"
+				placeholder="Amount of boxes" required autocomplete="number">
+		</td>
+		<td>
+			Portions
+		</tr>
+		<tr>
+		<td>
+			<label for="form_amount_gunslinger">Gunslinger Cookie, </label>
+		</td>
+		<td>
+			<input type="number" name="amount" id="form_amount_gunslinger" class="form_general" min="0" max="10" value="0" step="1" onchange="showValue(this.value)"
+				placeholder="Amount of boxes" required autocomplete="number">
+		</td>
+		<td>
+			Portions
+		</table>
+		</div>
+<br><br>		
+	    <div>
+			<input type="reset" value="Clear form" class="form_general" />
+			<input type="submit" value="Order now!" class="form_general" onclick="sendMail(); return false"/>
+		</div>
+    </div>
+  </div>
+
+<script>
+
+function sendMail(){
+        var temp = new Date();
+	var order_nr = temp.getFullYear().toString() +
+                  (1 + temp.getMonth()).toString() +
+                  temp.getDate().toString() +
+                  temp.getHours().toString() +
+                  temp.getMinutes().toString() +
+                  temp.getSeconds().toString() +
+                  temp.getMilliseconds().toString();
+	var amount = "Send me: \n" + document.getElementById("form_amount_bandit").value + " boxes of Bandits,\n" + 
+document.getElementById("form_amount_smuggler").value + " boxes of Smugglers,\n" +
+document.getElementById("form_amount_anarchist").value + " boxes of Anarchists, and\n" +
+document.getElementById("form_amount_gunslinger").value + " boxes of Gunslingers, \n" +
+" and it'd better be quick!";
+	var street = document.getElementById("form_street").value;
+	var zip = document.getElementById("form_zip").value;
+        var address = street + " - " + zip
+	var name = "When you'll arrive, ask for " + document.getElementById("form_name").value;
+	var phone = "IF SOMETHING HAPPENS, CALL ME AT: " + document.getElementById("form_phone").value;
+
+        var logo = "          \n";
+	var logo_2 = "\n    ..--/ OUTLAW COOKIES \\--..\n\n";
+
+	var name_in = logo + logo_2 + "\n\n\n" + amount + " to:" + "\n\n" + address + "\n\n" + name + "\n\n" + phone + "\n\n" + "ORDER NUMBER: " + order_nr; 
+	var link = "mailto:outlawcookies@gmail.com"
+             + "?cc="
+             + "&subject=" + escape("Ordering Cookies! - Order Number " + order_nr)
+             + "&body=" + escape(name_in)
+    	;
+	console.log(name_in);
+    	window.location.href = link;
+}
+</script>
+</BODY>
+</HTML>

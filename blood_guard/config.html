@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Bloodguard</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<script>
+	    // Thanks to https://gist.github.com/ChrisManess/5493235
+	    // Check for the various File API support.
+		if (window.File && window.FileReader && window.FileList && window.Blob) {
+		  // Great success! All the File APIs are supported.
+		} else {
+		  alert('The File APIs are not fully supported in this browser.');
+		}
+	</script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+
+</head>
+<body>
+
+	<div id="fullscreen_menu">
+		<section id="menu_entries">
+			<nav class="menu_nav">
+				<ul>
+						<input type="file" id="files" name="files[]" multiple />
+						<output id="list"></output>
+						<script src="js/select_file.js"></script>
+				</ul>
+			</nav>
+		</section>
+	</div>
+
+	// http://www.scriptol.com/javascript/javascript-ini.php	
+	
+	
+</body>
+</html>

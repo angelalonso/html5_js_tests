@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/***** Global *****/
+/*  Default browser CSS - General */
+
+body, div, h1, h2, h3, p, ul, ol, li, img, header, section, aside, footer, button {
+	margin: 0; padding: 0; border: 0; list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+
+.float {
+		float:left;
+	}
+	
+body {
+	background: #F6F6EE;
+	font-family : "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: 14px;
+	margin: 0 auto;
+	text-align: center;
+    }	
+
+
+/** Fullscreen Menu **/
+section#menu_entries {
+	background: #444444;
+	height: 100%;
+	margin: auto;
+
+	position: absolute;
+	left:0; right:0;
+	top:0; bottom:0;
+}
+
+nav.menu_nav ul li a{
+
+   	
+   	background: #297ECC;
+	border-top: 0.02em solid #4BA8FA;
+   	-webkit-border-radius: 0.2em;
+   	-moz-border-radius: 0.2em;
+   	border-radius: 0.2em;
+   	-webkit-box-shadow: rgba(0,0,0,1) 0 0.02em 0;
+   	-moz-box-shadow: rgba(0,0,0,1) 0 0.02em 0;
+   	box-shadow: rgba(0,0,0,1) 0 0.02em 0;
+   	color: #FFDC3A;
+   	font-size: 3em;
+	line-height: 1.9em;
+   	padding: 0.2em 0.4em;
+   	text-decoration: none;
+   	text-shadow: rgba(0,0,0,.4) 0 0.02em 0;
+   	vertical-align: middle;
+}
+
+nav.menu_nav ul li a:hover {
+	border-left: 0.02em solid #FFDC3A;
+	border-right: 0.02em solid #FFDC3A;
+	border-top: 0.02em solid #FFDC3A;
+	box-shadow: #FFDC3A 0 0.02em 0;
+}
+
+nav.menu_nav ul li a:active {
+	background: #1E68A8;
+}	
